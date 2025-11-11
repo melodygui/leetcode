@@ -1,0 +1,4 @@
+- Basic idea: stack of (char, count), pop when count == k
+- Time complexity: `O(n)` since it only makes one pass through the string and another pass through the stack to build the string.
+- Space complexity: `O(n)` because worst case it stores every letter of the string in the stack.
+- Remember that tuples are immutable in python, hence the choice of using a list `[char, count]`
