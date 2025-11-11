@@ -1,0 +1,4 @@
+### Notes
+- This is a DFS + backtracking problem. We backtrack by popping the neighbor we just added to our path after "trying" the path through the recursive DFS call. 
+- Note that we don't need a visited set here because a node can be in multiple paths. Since the graph is a DAG, meaning there are no cycles, there won't be any infinite recursion. 
+- Also note that we need to make a copy of the current path list (e.g. `paths.append(list(curr_path)`) when we add it to our solution due to python only stores a reference to the list and NOT a snapshot of it if you simply do `paths.append(curr_path)`. Without copying the list, the underlying list will keep getting modified in future calls of append() and pop(), leaving you with the initial list `[0]` in the end. 
