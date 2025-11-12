@@ -26,11 +26,14 @@ def invalidTransactions(self, transactions: List[str]) -> List[str]:
             else:
                 myDict[name].append(transaction)
         
+        # check each same name's transaction independently
         for name, trans in myDict.items():
             trans.sort(key = lambda x: x[1]) # sort by time 
 
             left = 0
-            right = 0
+            right = 0 
+
+            # do pairwise comparisons between every pair of transactions that share the same name - sliding window optimization
             while right < len(trans):
                 # find window where transactions in that window are within 60 min
                 while trans[right][1] - trans[left][1] > 60:
