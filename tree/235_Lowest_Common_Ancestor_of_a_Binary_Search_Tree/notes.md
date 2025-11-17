@@ -1,0 +1,2 @@
+- Time complexity: `O(h)`, where h is the height of the binary search tree. Since in each iteration of the while loop, you move one level down the BST. So in the worst case, you go from the root to the deepest leaf.
+- Space complexity: `O(1)`. Only a while loop with no recursion or extra data structures. No extra space is used.
