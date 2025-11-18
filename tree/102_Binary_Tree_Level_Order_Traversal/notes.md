@@ -1,0 +1,2 @@
+- This is a good problem to practice how to keep track of level information during BFS!
+- Time and space complexity are both `O(N)`, where N is the number of nodes in the tree.

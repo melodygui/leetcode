@@ -1,0 +1,2 @@
+- Time complexity: `O(N)`, where N is the number of nodes in the tree since the recursion visits each node exactly once and does a `O(1)` check in each recursion.
+- Space complexity: `O(h)`, where h is the height of the tree. In the worst case, the tree is uncompletely unbalanced (imagine every node only has a left child), so the height is equal to the number of nodes in the tree `N`. In the best case of a balanced tree, the height is `log(N)`.
