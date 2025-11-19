@@ -27,6 +27,6 @@ for s in sources:
 ```
 
 ### Complexity
-- **Time**: `O(m · n)`. Each cell is visited at most a constant number of times (once in DFS, once in the final sweep).
-- **Space**: `O(m · n)` worst-case recursion stack if the entire board is one big connected 'O' region.
+- **Time**: `O(number of cells in the grid) = O(rows * col)` (linear in the size of the problem). Each cell is visited at most a constant number of times (once in DFS, once in the final sweep).
+- **Space**: `O(number of cells in the grid)` worst-case recursion stack if the entire board is one big connected 'O' region.
 

@@ -23,9 +23,8 @@ class Solution:
                 if not DFS(prereq):
                     return False 
             
-            # why EXACTLY do we need these two lines?
-            visited.remove(course)
-            graph[course] = []
+            visited.remove(course) # visited tracks courses on the current DFS path / current recursion stack
+            graph[course] = [] # mark this course is safe (no paths starting from this node leads to cycles), so future DFS starting at this course will immediately return true
             
             return True 
         
